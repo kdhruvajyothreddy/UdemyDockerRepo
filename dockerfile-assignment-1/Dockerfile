@@ -28,7 +28,7 @@ WORKDIR /usr/src/app
 # - Node uses a "package manager", so it needs to copy in package.json file
 COPY package.json package.json
 # - then it needs to run 'npm install' to install dependencies from that file
-RUN npm install &&
+RUN npm install
 # - to keep it clean and small, run 'npm cache clean --force' after above
 RUN npm cache clean --force
 # - then it needs to copy in all files from current directory
